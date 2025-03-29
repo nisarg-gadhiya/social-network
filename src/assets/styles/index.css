@@ -1,0 +1,176 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Custom styles */
+
+/* Auth layout */
+.auth-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .auth-container {
+    flex-direction: row;
+  }
+}
+
+.auth-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-background {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .auth-background {
+    display: block;
+    flex: 1;
+    background-color: #f3f4f6;
+    position: relative;
+  }
+}
+
+.auth-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(59, 130, 246, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-message {
+  color: white;
+  text-align: center;
+  max-width: 32rem;
+}
+
+.auth-message h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.auth-message p {
+  font-size: 1.25rem;
+}
+
+/* Main layout */
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Utilities */
+.line-clamp-2, .line-clamp-3 {
+  display: block;            
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;         /* Single-line truncation fallback */
+  max-height: 3em;             /* Approximate height for 2-3 lines */
+  word-break: break-word;      /* Prevents breaking words weirdly */
+}
+
+.line-clamp-2 {
+  max-height: 3em;             /* Adjust for ~2 lines */
+}
+
+.line-clamp-3 {
+  max-height: 4.5em;           /* Adjust for ~3 lines */
+}
+
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* src/global.css (or src/index.css) */
+.line-clamp-2, .line-clamp-3 {
+  display: -webkit-box;       /* Required for -webkit-line-clamp */
+  display: flex;              /* Fallback for non-webkit browsers */
+  -webkit-box-orient: vertical;
+  box-orient: vertical;       /* Future-proofing */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;  /* Standard property (not yet widely supported) */
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;  
+}
+
+  
+
+
